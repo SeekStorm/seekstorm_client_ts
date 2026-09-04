@@ -5,13 +5,13 @@ Fetch-based, promise-oriented TypeScript client for the SeekStorm vector and lex
 ## Install
 
 ```bash
-npm install seekstorm-client
+npm install seekstorm_client_ts
 ```
 
 ## Usage
 
 ```ts
-import { FieldType, SeekStormClient } from "seekstorm-client";
+import { FieldType, SeekStormClient } from "seekstorm_client_ts";
 
 const client = new SeekStormClient({
   baseUrl: "http://127.0.0.1:8080",
@@ -43,3 +43,14 @@ npm run test:integration
 ```
 
 It defaults to `http://127.0.0.1:80`, creates the local demo API key through the default master key, then removes its disposable index. Set `SEEKSTORM_BASE_URL` and `SEEKSTORM_MASTER_API_KEY` to override either value.
+
+## Publishing
+
+The `Publish to npm` GitHub Actions workflow runs when a tag matching `v*` is pushed. It uses npm Trusted Publishing, so no `NPM_TOKEN` secret is needed.
+
+Before the first release, configure Trusted Publisher in npm for the `seekstorm_client_ts` package with:
+
+- Repository: `SeekStorm/seekstorm_client_ts`
+- Workflow filename: `publish.yml`
+
+Publish a matching package version by pushing a tag such as `v0.1.0`.
