@@ -1,6 +1,6 @@
 {
   "name": "seekstorm_client_ts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TypeScript Client for SeekStorm vector & lexical search server",
   "author": "Wolf Garbe <wolf.garbe@seekstorm.com>",
   "license": "Apache-2.0",
